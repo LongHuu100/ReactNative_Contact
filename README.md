@@ -5,7 +5,7 @@ Mình chỉ cần một vài thứ của mình thôi thì mình cần phải hi�
 Bạn có thể tham khảo trong code bên trên cho 2 nền tảng Ios và Android.
 Dưới Js khi sử dụng thì gọi module thông qua:
 
-/* Android phải gọi quyền trước, ios thì không cần
+Android phải gọi quyền trước, ios thì không cần
 import { PermissionsAndroid } from 'react-native';
 import Contacts from '../components/contact';
 
@@ -29,7 +29,6 @@ async function getContats(){
   }
 }
 getContats()
-*/
 
 var ReactNative = require('react-native')
 module.exports = ReactNative.NativeModules.Contacts
