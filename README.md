@@ -6,16 +6,20 @@ Bạn có thể tham khảo trong code bên trên cho 2 nền tảng Ios và And
 Dưới Js khi sử dụng thì gọi module thông qua:
 
 Android phải gọi quyền trước, ios thì không cần
+
 import { PermissionsAndroid } from 'react-native';
+
 import Contacts from '../components/contact';
+
 async function getContats(){
+
   const granted = await PermissionsAndroid.request(
-  PermissionsAndroid.PERMISSIONS.READ_CONTACTS,
-  {
+  
+  PermissionsAndroid.PERMISSIONS.READ_CONTACTS,{
     title: 'Contacts',
       message: 'This app would like to view your contacts.'
-  },
-  );
+  });
+  
   if (granted === PermissionsAndroid.RESULTS.GRANTED) {
     Contacts.getAll((err, contacts) => {
       if (err === 'denied'){
@@ -26,6 +30,7 @@ async function getContats(){
     })
   }
 }
+
 getContats()
 
 var ReactNative = require('react-native')
